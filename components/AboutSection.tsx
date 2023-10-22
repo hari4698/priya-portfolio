@@ -64,12 +64,12 @@ export default function AboutSection() {
                 </TabsTrigger>
               </TabsList>
               <TabsContent value="education">
-                <TabCard tabData={uw_tacoma} />
-                <TabCard tabData={srit} />
+                <TabCard title={uw_tacoma.title} desc={uw_tacoma.desc} date={uw_tacoma.date} />
+                <TabCard title={srit.title} desc={srit.desc} date={srit.date} />
               </TabsContent>
               <TabsContent value="skills">
-                <TabCard tabData={hitachi} />
-                <TabCard tabData={LTMindTree} />
+                <TabCard title={hitachi.title} desc={hitachi.desc} date={hitachi.date} />
+                <TabCard title={LTMindTree.title} desc={LTMindTree.desc} date={LTMindTree.date} />
               </TabsContent>
             </Tabs>
           </div>
