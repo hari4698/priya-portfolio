@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import NavLink from "./NavLink";
-import {Menu, X} from 'lucide-react'
+import { Menu, X } from "lucide-react";
 import MobileMenu from "./MobileMenu";
 
 const navLinks = [
@@ -32,17 +32,21 @@ export default function Navbar() {
           PRIYA
         </Link>
         <div className="mobile-menu block md:hidden">
-            {
-                !navbarOpen ? (
-                    <button onClick={() => setNavbarOpen(true)} className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white">
-                        <Menu className="h-5 w-5" />
-                    </button>
-                ):(
-                  <button onClick={() => setNavbarOpen(false)} className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white">
-                  <X className="h-5 w-5" />
-              </button>
-                )
-            }
+          {!navbarOpen ? (
+            <button
+              onClick={() => setNavbarOpen(true)}
+              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
+            >
+              <Menu className="h-5 w-5" />
+            </button>
+          ) : (
+            <button
+              onClick={() => setNavbarOpen(false)}
+              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
+            >
+              <X className="h-5 w-5" />
+            </button>
+          )}
         </div>
         <div className="menu hidden md:block md:w-auto" id="navbar">
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
@@ -54,8 +58,7 @@ export default function Navbar() {
           </ul>
         </div>
       </div>
-      {navbarOpen ? <MobileMenu links={navLinks} /> : null
-      }
+      {navbarOpen ? <MobileMenu links={navLinks} /> : null}
     </nav>
   );
 }

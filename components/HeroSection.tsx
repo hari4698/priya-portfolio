@@ -27,7 +27,7 @@ function HeroSection() {
       ]}
       wrapper="span"
       speed={50}
-      repeat={Infinity}
+      repeat={0}
     />
           </h1>
           <p className="text-[#ADB7BE] text-base  mb-6 sm:text-lg lg:text-xl">

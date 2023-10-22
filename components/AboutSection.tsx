@@ -1,7 +1,28 @@
 import Image from "next/image";
 import React from "react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/Tabs"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/Tabs";
+import { TabCard } from "./TabCard";
 
+const uw_tacoma = {
+  title: "University of Washington",
+  desc: "Master's in Computer Science and Systems",
+  date: "Sep 23 - Dec 24",
+};
+const srit = {
+  title: "Sri Ramakrishna Institute of Technology",
+  desc: "Bachelor's in Electronics and Communications Engineering",
+  date: "Jul 15 - Jun 19",
+};
+const hitachi = {
+  title: "Hitachi Energy",
+  desc: "Software Engineer",
+  date: "Oct 21 - Apr 22",
+};
+const LTMindTree = {
+  title: "LTMindtree",
+  desc: "Software Engineer",
+  date: "Aug 19 - Oct 21",
+};
 
 export default function AboutSection() {
   return (
@@ -26,32 +47,29 @@ export default function AboutSection() {
             seeking ways to apply these strengths to create value for my team
             and clients.
           </p>
-          <div className="flex flex-row mt-8">
-            <Tabs defaultValue="account" className="w-[400px]">
-              <TabsList>
-                <TabsTrigger value="education">Education</TabsTrigger>
-                <TabsTrigger value="skills">Skills</TabsTrigger>
+          <div className="flex flex-row mt-8 ">
+            <Tabs defaultValue="education" className="w-full ">
+              <TabsList className="bg-[#27272a] rounded-md">
+                <TabsTrigger
+                  className="data-[state=active]:bg-[#610073]"
+                  value="education"
+                >
+                  Education
+                </TabsTrigger>
+                <TabsTrigger
+                  className="data-[state=active]:bg-[#610073]"
+                  value="skills"
+                >
+                  Experience
+                </TabsTrigger>
               </TabsList>
               <TabsContent value="education">
-                <ul>
-                  <li>UW tacmoa</li>
-                  <li>UW tacmoa</li>
-                  <li>UW tacmoa</li>
-                  <li>UW tacmoa</li>
-                  <li>UW tacmoa</li>
-                  <li>UW tacmoa</li>
-                  <li>UW tacmoa</li>
-
-                  <li>UW tacmoa</li><li>UW tacmoa</li>
-
-                </ul>
+                <TabCard tabData={uw_tacoma} />
+                <TabCard tabData={srit} />
               </TabsContent>
               <TabsContent value="skills">
-                <ul>
-                  <li>UW tacmoa</li>
-                  <li>UW tacmoa</li>
-                  <li>UW tacmoa</li>
-                </ul>
+                <TabCard tabData={hitachi} />
+                <TabCard tabData={LTMindTree} />
               </TabsContent>
             </Tabs>
           </div>
