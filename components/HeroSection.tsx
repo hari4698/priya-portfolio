@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React from "react";
-import { TypeAnimation } from 'react-type-animation';
+import { TypeAnimation } from "react-type-animation";
 
 function HeroSection() {
   return (
@@ -10,34 +10,34 @@ function HeroSection() {
       <div className="grid grid-cols-1 sm:grid-cols-12">
         <div className="col-span-7 place-self-center text-center sm:text-left">
           <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
-            
             <span className="text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-pink-600">
-            Bonjour, I&apos;m{" "}
+              Bonjour, I&apos;m{" "}
             </span>
             <br></br>
             <TypeAnimation
-      sequence={[
-        // Same substring at the start will only be typed out once, initially
-        'Priya',
-        1000, // wait 1s before replacing "Mice" with "Hamsters"
-        'a graduate student',
-        1000,
-        'a software developer',
-        1000
-      ]}
-      wrapper="span"
-      speed={50}
-      repeat={0}
-    />
+              sequence={[
+                // Same substring at the start will only be typed out once, initially
+                "Priya",
+                1000, // wait 1s before replacing "Mice" with "Hamsters"
+                "a graduate student",
+                1000,
+                "a software developer",
+                1000,
+              ]}
+              wrapper="span"
+              speed={50}
+              repeat={0}
+            />
           </h1>
           <p className="text-[#ADB7BE] text-base  mb-6 sm:text-lg lg:text-xl">
-            
-          I&apos;m a graduate student at University of Washington pursing Master&apos;s
-            in Computer Science
+            I&apos;m a graduate student at University of Washington pursing
+            Master&apos;s in Computer Science
           </p>
           <div>
             <button className="px-6 py-3 w-full sm:w-fit rounded-full bg-[#9F0BBD] hover:bg-[#AA0BCA] mt-3">
-              <a href="/VishnuPriya_resume.pdf" download>Download Résumé</a>
+              <a href="/VishnuPriya_resume.pdf" download>
+                Download Résumé
+              </a>
             </button>
           </div>
         </div>

@@ -7,26 +7,38 @@ const uw_tacoma = {
   title: "University of Washington",
   desc: "Master's in Computer Science and Systems",
   date: "Sep 23 - Dec 24",
+  tech1: "Advanced Algorithms",
+  tech2: "Data Structures",
+  tech3: "Distribured Systems",
 };
 const srit = {
   title: "Sri Ramakrishna Institute of Technology",
   desc: "Bachelor's in Electronics and Communications Engineering",
   date: "Jul 15 - Jun 19",
+  tech1: "Computer Networks",
+  tech2: "OOPS",
+  tech3: "Computer Architecure",
 };
 const hitachi = {
   title: "Hitachi Energy",
   desc: "Software Engineer",
   date: "Oct 21 - Apr 22",
+  tech1: "ASP.NET",
+  tech2: "AngualrJS",
+  tech3: "AJAX",
 };
 const LTMindTree = {
   title: "LTMindtree",
   desc: "Software Engineer",
   date: "Aug 19 - Oct 21",
+  tech1: "ASP.NET",
+  tech2: "ReactJS",
+  tech3: "Web API",
 };
 
 export default function AboutSection() {
   return (
-    <section className="text-white">
+    <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <Image
           src="/images/about-image.png"
@@ -64,12 +76,40 @@ export default function AboutSection() {
                 </TabsTrigger>
               </TabsList>
               <TabsContent value="education">
-                <TabCard title={uw_tacoma.title} desc={uw_tacoma.desc} date={uw_tacoma.date} />
-                <TabCard title={srit.title} desc={srit.desc} date={srit.date} />
+                <TabCard
+                  title={uw_tacoma.title}
+                  desc={uw_tacoma.desc}
+                  date={uw_tacoma.date}
+                  tech1={uw_tacoma.tech1}
+                  tech2={uw_tacoma.tech2}
+                  tech3={uw_tacoma.tech3}
+                />
+                <TabCard
+                  title={srit.title}
+                  desc={srit.desc}
+                  date={srit.date}
+                  tech1={srit.tech1}
+                  tech2={srit.tech2}
+                  tech3={srit.tech3}
+                />
               </TabsContent>
               <TabsContent value="skills">
-                <TabCard title={hitachi.title} desc={hitachi.desc} date={hitachi.date} />
-                <TabCard title={LTMindTree.title} desc={LTMindTree.desc} date={LTMindTree.date} />
+                <TabCard
+                  title={hitachi.title}
+                  desc={hitachi.desc}
+                  date={hitachi.date}
+                  tech1={hitachi.tech1}
+                  tech2={hitachi.tech2}
+                  tech3={hitachi.tech3}
+                />
+                <TabCard
+                  title={LTMindTree.title}
+                  desc={LTMindTree.desc}
+                  date={LTMindTree.date}
+                  tech1={LTMindTree.tech1}
+                  tech2={LTMindTree.tech2}
+                  tech3={LTMindTree.tech3}
+                />
               </TabsContent>
             </Tabs>
           </div>

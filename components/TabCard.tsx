@@ -12,9 +12,12 @@ interface tabDataType {
   title: string;
   desc: string;
   date: string;
+  tech1: string;
+  tech2: string;
+  tech3: string;
 }
 
-export function TabCard({title, desc, date}: tabDataType) {
+export function TabCard({title, desc, date, tech1, tech2, tech3}: tabDataType) {
   return (
     <Card className="w-full mb-2">
       <CardHeader className="grid grid-cols-[1fr_110px] items-start gap-4 space-y-0">
@@ -32,15 +35,15 @@ export function TabCard({title, desc, date}: tabDataType) {
         <div className="flex space-x-4 text-sm text-muted-foreground">
           <div className="flex items-center">
             <Circle className="mr-1 h-3 w-3  text-purple-400" />
-            Advanced Algorithms
+            {tech1}
           </div>
           <div className="flex items-center">
             <Circle className="mr-1 h-3 w-3 text-purple-400" />
-            Data Structures
+            {tech2}
           </div>
           <div className="flex items-center">
             <Circle className="mr-1 h-3 w-3 text-purple-400" />
-            Distribured Systems
+            {tech3}
           </div>
         </div>
       </CardContent>
