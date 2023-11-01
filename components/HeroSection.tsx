@@ -3,6 +3,8 @@
 import Image from "next/image";
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
+import { Github, Linkedin } from "lucide-react";
+import Link from "next/link";
 
 function HeroSection() {
   return (
@@ -39,6 +41,20 @@ function HeroSection() {
                 Download Résumé
               </a>
             </button>
+            {/* <Link
+              href="https://github.com/Priyaraj05"
+              target="_blank"
+              className="h-14 w-14 mr-2 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link"
+            >
+              <Github className="h-10 w-10 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  cursor-pointer group-hover/link:text-white" />
+            </Link>
+            <Link
+              href="https://github.com/Priyaraj05"
+              target="_blank"
+              className="h-14 w-14 mr-2 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link"
+            >
+              <Linkedin className="h-10 w-10 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  cursor-pointer group-hover/link:text-white" />
+            </Link> */}
           </div>
         </div>
         <div className="col-span-5 place-self-center mt-4 lg:mt-0">

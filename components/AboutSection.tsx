@@ -61,7 +61,7 @@ export default function AboutSection() {
           </p>
           <div className="flex flex-row mt-8 ">
             <Tabs defaultValue="education" className="w-full ">
-              <TabsList className="bg-[#27272a] rounded-md">
+              <TabsList className="bg-[#181818] rounded-md">
                 <TabsTrigger
                   className="data-[state=active]:bg-[#610073]"
                   value="education"
