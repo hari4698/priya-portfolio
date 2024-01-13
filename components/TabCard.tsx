@@ -12,12 +12,10 @@ interface tabDataType {
   title: string;
   desc: string;
   date: string;
-  tech1: string;
-  tech2: string;
-  tech3: string;
+  tech: string[];
 }
 
-export function TabCard({title, desc, date, tech1, tech2, tech3}: tabDataType) {
+export function TabCard({title, desc, date, tech}: tabDataType) {
   return (
     <Card className="w-full mb-2">
       <CardHeader className="grid grid-cols-[1fr_110px] items-start gap-4 space-y-0">
@@ -34,16 +32,16 @@ export function TabCard({title, desc, date, tech1, tech2, tech3}: tabDataType) {
       <CardContent>
         <div className="flex space-x-4 text-sm text-muted-foreground">
           <div className="flex items-center">
-            <Circle className="mr-1 h-3 w-3  text-purple-400" />
-            {tech1}
-          </div>
-          <div className="flex items-center">
-            <Circle className="mr-1 h-3 w-3 text-purple-400" />
-            {tech2}
-          </div>
-          <div className="flex items-center">
-            <Circle className="mr-1 h-3 w-3 text-purple-400" />
-            {tech3}
+            <ul style={{ display: 'flex', flexWrap: 'wrap', listStyle: 'none', padding: 0 }}>
+              {tech.map((techItem, index) =>(
+                <li key={index}>
+                  <Circle size={10} color="purple" style={{ marginRight: '3px', marginLeft: '10px',  display: 'inline-block'}} />
+                  {/* <span style={{ marginRight: '3px', marginLeft: '10px'}}>•</span> */}
+                  {techItem}</li>
+              ) )}
+            </ul>
+            {/* <Circle className="mr-1 h-3 w-3  text-purple-400" />
+            {tech} */}
           </div>
         </div>
       </CardContent>

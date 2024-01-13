@@ -23,8 +23,6 @@ function HeroSection() {
                 1000, // wait 1s before replacing "Mice" with "Hamsters"
                 "a graduate student",
                 1000,
-                "a software developer",
-                1000,
               ]}
               wrapper="span"
               speed={50}

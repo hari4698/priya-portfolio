@@ -20,7 +20,7 @@ const ProjectCard = ({
   return (
     <div>
       <div
-        className="h-[350px] lg:h-[550px] rounded-t-xl group bg-cover relative  bg-no-repeat"
+        className="h-[50px] lg:h-[150px] rounded-t-xl group bg-cover relative  bg-no-repeat"
         style={{ background: `url(${imageUrl})` }}
       >
         <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500 ">
