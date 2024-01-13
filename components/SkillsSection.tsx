@@ -14,7 +14,7 @@ export default function SkillsSection() {
   return (
     <section className="text-white py-8" id="skills">
       <h2 className="text-4xl font-bold text-white mb-4">Skills</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 grid-rows-3 gap-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 grid-rows-3 gap-2">
           {techImages.map((imageItem, index) => (
             <div className="group relative overflow-hidden border-1 rounded-2xl flex items-center justify-center">
               <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
